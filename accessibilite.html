@@ -8,18 +8,21 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="header">
-			<h1>Bienvenue sur notre site</h1>
-			<div class="nav" role="navigation">
+
+		<header>
+		<h1>Bienvenue sur notre site</h1>
+		</header>
+
+			<section class="nav" role="navigation">
 				<ul>
 					<li><a href="#" aria-describedby="Redige vers Accueil">Accueil</a></li>
 					<li><a href="#" aria-describedby="Redirige vers Services">Services</a></li>
 					<li><a href="#" aria-describedby="Redirige vers Contact">Contact</a></li>
 				</ul>
-			</div>
+			</section>
 		</div>
 
-		<div class="main">
+		<section class="main">
 			<h2>Nos Services</h2>
 			<button aria-describedby="bouton menu" 
 				class="toggle_menu_services"
@@ -37,21 +40,22 @@
 				<li><a href="#">UX Design</a></li>
 			</ul>
 
-			<div class="service">
+			<section class="service">
 				<h3>Développement Web</h3>
 				<p>Nous créons des sites modernes et sur-mesure.</p>
 				<button role="button" aria-describedby="Redirige vers la page developpement web">En savoir plus</button>
-			</div>
+				
+				<div class="service">
+					<h3>SEO</h3>
+					<p>Optimisation des sites pour Google.</p>
+					<button role="button" aria-describedby="Redirige vers la page SEO">En savoir plus</button>
+				</div>
+			</section>
 
-			<div class="service">
-				<h3>SEO</h3>
-				<p>Optimisation des sites pour Google.</p>
-				<button role="button" aria-describedby="Redirige vers la page SEO">En savoir plus</button>
-			</div>
 
 			<img src="http://picsum.photos/800/600?v=1" role="img" alt="diaporama image divers"/>
 
-			<div class="contact">
+			<section class="contact">
 				<h2>Nous contacter</h2>
 				<form role="form">
 					<input type="text" placeholder="Nom complet" tabindex="0" aria-label="Nom_prenom"/>
@@ -59,12 +63,13 @@
 					<textarea placeholder="Votre message" tabindex="0" aria-label="votre message"></textarea>
 					<button>Envoyer</button>
 				</form>
-			</div>
-		</div>
+			</section>
+		</section>
 
-		<div class="footer">
+		<footer>
 			<p>© 2025 - Tous droits réservés</p>
-		</div>
+		</footer>
+		</>
 		<script>
 			// Script pour gérer l'ouverture/fermeture du menu accessible
 			document
