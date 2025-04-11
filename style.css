@@ -36,20 +36,27 @@
     
 }
 
- @media screen and (min-width: 480px) {
-    .c-products-grid {
-        
+ @media screen and (max-width: 600px) {
+    .c-product{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
     }
-  }
-
-  @media screen and (min-width: 768px) {
-    .c-products-grid {
+    .c-product_inner{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+    .c-product_infos{
+        flex: 1;
+        display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
     
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .c-products-grid {
+ }
     
-    }
-  }
+
+
+  
