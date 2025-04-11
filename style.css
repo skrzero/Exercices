@@ -1,0 +1,40 @@
+.container{
+    
+}
+.c-breadcrumb{
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+
+}
+.c-breadcrumb li + li::before{
+    content: ">";
+    margin: 8px;
+}
+
+
+.c-products-grid{
+    display: flex;
+    justify-content: flex-start;    
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+
+@media screen and (min-width: 480px) {
+    .c-products-grid {
+        
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .c-products-grid {
+    
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .c-products-grid {
+      
+    }
+  }
