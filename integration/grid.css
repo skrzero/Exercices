@@ -1,0 +1,20 @@
+.container{
+    display: grid;
+    
+}
+.c-breadcrumb{
+    display: flex; 
+    justify-content: flex-start;
+    list-style: none;
+    background-color: aqua;
+
+}
+.c-breadcrumb li + li::before{
+    content: ">";
+    margin: 8px;
+}
+
+.c-product_thumb{
+    display: grid;
+    grid-template-columns: repeat(6 1fr);
+}
