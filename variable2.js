@@ -4,7 +4,7 @@ function capitalizeFirstLetter (msg){
     return result;
 }
 
-let message ='hello';
+let message ='hello0';
 let message2= "bye";
 
 
@@ -12,3 +12,17 @@ let message2= "bye";
 console.log(capitalizeFirstLetter(message2));
 console.log(capitalizeFirstLetter(message));
 console.log(capitalizeFirstLetter("bonjour"));
+
+
+function countOccurrences (count,mot){
+    let parties =count.split(mot);
+    let occurrences = parties.length -1;
+    return occurrences;
+
+}
+let hello =countOccurrences("hello hello hello hello","hello") ;
+console.log(hello);
+
+
+
+
