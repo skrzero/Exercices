@@ -41,8 +41,56 @@ while (numbPair < 21) {
 }
 
 function multi(){
+    // let nombreX = parseInt(prompt("donner un nombre"));
     for (let i = 1; i <11; i++){
-        console.log(i, i*7);
+        // console.log(i+" x "+nombreX+" = "+i*nombreX);
     }
 }
 multi();
+// let variable =parseInt(prompt("donner un nombre"));
+for (let i= 1; i <21; i++){
+    // console.log(i);
+    if (i % 3 ===0 && i % 5===0) {
+        // console.log(i+ ' fizzbuzz');       
+    } else if (i % 3===0){
+    // console.log(i +' fizz');
+} else if (i % 5 ===0) {
+//  console.log(i+ 'buzz');  
+    
+} else{
+    // console.log(i);
+}    
+}
+
+function voyelle (){
+    let text = "Bonjour tout le monde";
+    let voyelles ="aeiouyAEIOUY";
+    let result ="";
+    for (let i = 0; i <text.length; i++){
+        let mot = text[i];
+        if (mot === " "){
+            continue;
+        }
+        if (voyelles.includes(mot)){
+            // console.log(mot +" = voyelle");
+            result += mot
+        } else {
+            // console.log(mot +" = consonne")
+        }
+    }   
+}
+// voyelle();
+
+
+function pyramid (){
+    let numbStar =parseInt(prompt("nombre d'etoiles"));
+    
+    for (let i =1; i<=numbStar;i ++){
+        let spaces =" ".repeat(numbStar -i);
+        let star ="#".repeat(i*2-1);
+ // multipli le chifre * par  2 -1 exemple 1*2=2  2-1=1 / 2*2 =4 -1 =3 du coup sa creer des chiffre impairs ce que l'on veut dans ce cas la 
+        console.log(spaces+star);
+    }
+}
+pyramid();
+
