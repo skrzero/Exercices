@@ -83,14 +83,31 @@ function voyelle (){
 
 
 function pyramid (){
-    let numbStar =parseInt(prompt("nombre d'etoiles"));
+    // let numbStar =parseInt(prompt("nombre d'etoiles"));
     
     for (let i =1; i<=numbStar;i ++){
         let spaces =" ".repeat(numbStar -i);
         let star ="#".repeat(i*2-1);
  // multipli le chifre * par  2 -1 exemple 1*2=2  2-1=1 / 2*2 =4 -1 =3 du coup sa creer des chiffre impairs ce que l'on veut dans ce cas la 
-        console.log(spaces+star);
+        // console.log(spaces+star);
     }
 }
-pyramid();
+// pyramid();
 
+function numberRandom (){
+    for (let i = 0; i <1; i++){
+        let randomizer = Math.floor(Math.random()* 100 +1);
+        console.log(randomizer);
+
+        let numbUser= -1;
+       while(numbUser!= randomizer){
+        numbUser = parseInt(prompt("donner un nombre"));
+        if (numbUser === randomizer){
+            alert("bien jouer");
+        } else {
+            alert("perdu recommence");
+        }
+    }
+    }
+}       
+numberRandom()
