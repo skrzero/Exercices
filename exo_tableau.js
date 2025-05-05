@@ -43,7 +43,76 @@ function displayArray(tab) {
 // console.log(displayArray(mot));
 
 // exo 6
+let tableau = ['Pomme', 'Banane', 'Abricot', 'Cerise'];
+function displayArray2(tab2){
+	tab2.splice(3, 0,"et");
+	return tab2.join(' ');
+	
+}
+// console.log(displayArray2(tableau))
 
+// exo 7
+let fruits = ['Pomme', 'Banane', 'Abricot', 'Cerise'];
+
+function displayArray3(tabM, useAnd) {
+    let copy = [...tabM]; // copie du tabM
+
+    if (useAnd === true && copy.length > 1) {
+        let last = copy.pop(); // enleve le dernier element
+        return copy.join(', ') + ' et ' + last;
+    } else {
+        return copy.join(', '); // liste simple
+    }
+}
+
+// console.log(displayArray3(fruits, true));   // Pomme, Banane, Abricot et Cerise
+// console.log(displayArray3(fruits, false));  // Pomme, Banane, Abricot, Cerise
+
+// exo 8
+let alpha = "je suis en train d'apprendre le JavaScript";
+
+function sortWordsInString(CDM,bool){
+let mot = CDM.split(" ");
+mot.sort ((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
+return mot.join(" ");
+}
+// console.log(sortWordsInString(alpha));
+
+// exo 9
+let nombres2 = [1, 2, 3, 4, 5, 6];
+const resultat2 = nombres2
+  .filter(nombre => nombre % 2 === 0)   //  garde uniquement les nombres pairs
+  .map(nombre => nombre * 2);          //  multiplie chaque nombre pair par 2
+
+// console.log(resultat2); 
+
+// exo 10
+function roundDownArray() {
+	let arrondi = [3.7, 8.4, 2.1, 5.9];
+	let rond = [];
+  
+	for (let i = 0; i < arrondi.length; i++) {
+	  rond.push(Math.floor(arrondi[i]));
+	}
+  
+	return rond;
+  }
+  
+//   console.log(roundDownArray()); 
+
+// exo 11
+function sumOfArray(){
+	let arrondi2 =[3.7, 8.4, 2.1, 5.9];
+	let resultat3 = [];
+	
+	for (let i = 0; i < arrondi2.length; i ++){
+		resultat3.push(Math.floor(arrondi2[i]));
+	}
+	let moyenne2 = resultat3.reduce((a, b) => a + b, 0);
+	return moyenne2;
+}
+console.log(sumOfArray());
+  
 
 
 
