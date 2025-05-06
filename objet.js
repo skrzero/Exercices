@@ -34,8 +34,9 @@ let bibliotheque=[
 function emprunterLivre(titre){
     for (let i = 0; i < bibliotheque.length; i++){
         if (bibliotheque[i].titre === titre){
-            if (bibliotheque[i].disponible=true){
+            if (bibliotheque[i].disponible===true){
                 console.log("livre emprunté avec succés");
+                bibliotheque[i].disponible=false;
             } else {
                 console.log("ce livre n'est pas disponible");
             }
@@ -43,4 +44,21 @@ function emprunterLivre(titre){
         }
     }
 }
-emprunterLivre("charlie")
+emprunterLivre("alpha")
+
+function rendreLivre(titre){
+for (let i = 0; i < bibliotheque.length; i++){
+    if (bibliotheque[i].titre === titre){
+        if (bibliotheque[i].disponible===false){
+            bibliotheque[i].disponible = true;
+            console.log("Merci pour le retour du livre");
+            
+        } else  {
+            console.log("aurevoir");
+        }
+        return;
+    }
+}
+}
+rendreLivre("alpha")
+
