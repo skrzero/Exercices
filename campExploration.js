@@ -10,5 +10,6 @@ function ajouterObjet(){
     sac.appendChild(itemSelect);
     const boutonSup = document.createElement("button");
     boutonSup.textContent = "supprimer";
+    sac.appendChild(boutonSup);
     console.log(boutonSup);   
 }
