@@ -1,7 +1,7 @@
 function ajouterObjet(){
     const select = document.getElementById("objetSelect");
     const item = select.value;
-        console .log(item);
+        console.log(item);
     const sac = document.getElementById("sac");
     const camp= document.getElementById("camp");
     const itemSelect = document.createElement("div");
@@ -23,6 +23,10 @@ function ajouterObjet(){
         itemSelect.remove();
         console.log("supp");
     };
+    // boutonMove.onclick = (event)=>{
+    //   console.log(event)
+    //   }
+
     boutonMove.onclick = function(){
         const parentId= itemSelect.parentElement.id;
         if (parentId==="sac"){
