@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async src="objet.js"></script>
+    <script defer src="BouclesConditions.js"></script>
     <title>Document</title>
 </head>
 <body style="background-color: grey;">
     <!-- DOM -->
-    <button onclick="afficherDOM()">Afficher le DOM</button>
-    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta impedit reiciendis harum numquam, ducimus repudiandae suscipit alias itaque, officia vitae qui doloremque dolores! Ratione vero autem amet accusamus minus.</div>
+     <div id ="sommaire"></div>
+     <h2>texte</h2>
+    <div id="parent" style="width: 100%;align-items: center;display: flex;flex-direction: column;">
+        <div style="justify-content: center;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate soluta impedit reiciendis harum numquam, ducimus repudiandae suscipit alias itaque, officia vitae qui doloremque dolores! Ratione vero autem amet accusamus minus.</div>
+        <button onclick="message()" id="message2"style="justify-content: center;" >bouton c'est pt</button>
+    </div>
+    <h2>color</h2>
+    <p id="colorP" onclick="colorTextP()">text</p>
+    <h2>jaime</h2>
+    <button onclick="likeCount()" id ="like">like</button>
     <div id="resultat"></div>
+    <h2>gege</h2>
+    <button id="btnAjouter" onclick="boutonDeGege()">Sentence</button>
+    <div id = "tribunalDeGege"></div>
+
+    <div id="boite" onclick="prison()">let me in</div>
 </body>
 </html>
