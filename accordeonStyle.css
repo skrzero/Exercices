@@ -1,0 +1,10 @@
+.accordion__answer-bloc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion__bloc.active .accordion__answer-bloc  {
+  max-height: 300px;
+  margin-top: 20px; 
+}
