@@ -15,13 +15,11 @@ let resultat = document.getElementById("resultat");
 let canPrepareSmoothie = true;
 // Fonction de préparation
 function preparerSmoothie() {
-  if (canPrepareSmoothie === false) {
-    return;
-    // return stop la lecture de la fonction
-  }
+  resultat.textContent="";
+  resultat.style.backgroundColor = null;
+  
   compteur++;
-  document.getElementById("compteur").textContent =
-    "Smoothies préparés : " + compteur;
+  document.getElementById("compteur").textContent = "Smoothies préparés : " + compteur;
   for (let i = 0; i < 3; i++) {
     let indexFruits = Math.round(Math.random() * (6 - 0));
     let paragraphe = document.createElement("p");
@@ -33,12 +31,12 @@ function preparerSmoothie() {
     // resultat.textContent += fruits[indexFruits];
     
   }
-  canPrepareSmoothie = false;
+ 
+  
 }
 
 // Fonction de reset
 function boireSmoothie() {
   resultat.textContent="";
-  canPrepareSmoothie =true;
   resultat.style.backgroundColor = null;
 }
