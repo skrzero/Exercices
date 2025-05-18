@@ -72,13 +72,28 @@ console.log(estPair(7)); // false
 
 // les boucles 
 let str = 'Lucie';
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) { /* la boucle for s'utilise quand tu connais les quantité */
 	console.log('Itération numéro:', i);
 	console.log(str.charAt(i)); /*charAt(i) Affiche chaque lettre du prénom Lucie, une par une.*/
 }
 // while
-let j = 0;
-while (j < 5) { /* tant que j reste indferieur a 5 il continue*/
-	console.log('Itération numéro:', j);
-	j++;
+let cailloux = 0;
+while (cailloux < 5) { /* tant que cailloux reste inferieur a 5 il continue, la boucle while s'utilise quand on doit compter quelque chose sans connaitre les quantités */
+	console.log('Itération numéro:', cailloux);
+	cailloux++;
 }
+
+// tableaux
+let tabfruits = ['pomme', 'poire', 'abricot'];
+console.log(tabfruits.length);
+console.log(tabfruits[1]); /* la case 1 correspond a "poire"*/
+tabfruits[6] = 'mangue'; /*rajoutes une mangue à la case 6. en laissant des espaces indefined (vide) entre la case 2 et 6 */
+console.log(tabfruits); /* regarde les elements dans le tableau y compris les emplacements vides [0] a [6]*/
+console.log(tabfruits[18]); /* remonte "indefined" car la case 18 n'existe pas*/
+
+// copie de tableau
+const valeurTableau = [1, 23, 38, 3, 89, 8];
+const copyTableau = [...valeurTableau]; /* ici on recupere on copie avec l'operateur "..." valeurTableau*/
+copyTableau[1] = 1; /* modification de l'element N°1 de la copyTableau  23 = 1*/
+console.log('array de base', valeurTableau);/* = [1, 23, 38, 3, 89, 8]*/
+console.log('array modifié', copyTableau); /*  = [1, 1, 38, 3, 89, 8]*/
