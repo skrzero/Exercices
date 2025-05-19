@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="../js/callBack.js"></script>
+    <script defer src="../js/timer.js"></script>
     <title>Document</title>
 </head>
 <body style="background-color: grey;">
@@ -26,8 +26,14 @@
     <div id="boite" onclick="prison()">let me in</div>
     <button id="btnCharger">charger</button>
     <p id="status">commencer</p>
-    <button onclick="demarrerChrono()" id="chronometre" >demarrer le chronometre</button>
-    <p id="resultatChrono">00</p>
+
+
+    <h2>Mon Timer</h2>
+<p id="affichage">Temps : 0 seconde</p>
+
+<button id="demarrer" class="btn btn-success">Démarrer</button>
+<button id="pause" class="btn btn-warning">Pause
+<button id="reset" class="btn btn-danger">Réinitialiser</button>
     
     
 </body>
