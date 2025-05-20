@@ -27,7 +27,7 @@ accueillir("sylvain", direBonjour)
 
 // exo 3
 // function poserQuestion(question, ouiCallback, nonCallback){
-//     if(confirm(question)=== true){
+//     // if(confirm(question)=== true){
 //         console.log(ouiCallback);
 //     } else {
 //         console.log(nonCallback);
@@ -36,18 +36,34 @@ accueillir("sylvain", direBonjour)
 // poserQuestion("veut tu apprendre le javascript","super choix","dommage");
 
 // exo 4
-function animerMots(mots,callback){
-    let index = 0;
-    mots = mots.split("");
+// function animerMots(mots,callback){
+//     let index = 0;
+//     mots = mots.split("");
 
-    let interval = setInterval(function(){
-        if(index < mots.length){
-            callback(mots[index]); 
-            index++;
-        } else {
-            clearInterval(interval); 
-            callback()
-        }
-    }, 1000);
+//     let interval = setInterval(function(){
+//         if(index < mots.length){
+//             callback(mots[index]); 
+//             index++;
+//         } else {
+//             clearInterval(interval); 
+//             callback()
+//         }
+//     }, 1000);
+// }
+// animerMots("fonctionne",callback(mots[index]))
+
+let saladeFruits = ["pomme","fraise","banane","poire"];
+
+function animerMots (fruit, callback){
+  let index = 0;
+  let interval = setInterval(function(){
+      console.log(fruit[index]);
+      index++;
+  if(index === fruit.length ){
+    clearInterval(interval)
+    callback();
+  }
+  },1000);
+ 
 }
-animerMots("fonctionne",callback(mots[index]))
+animerMots(saladeFruits,direBonjour)
