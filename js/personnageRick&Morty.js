@@ -17,6 +17,11 @@ let zoneAffichage = document.getElementById("character");
 bouton.addEventListener("click", async function () {
   if (totalPersonnages > 0) {
     try {
+      let tabRandom =[];
+      for(let i = 0 ; i< 10; i++){
+        tabRandom.push(Math.floor(Math.random() * totalPersonnages) + 1);
+                
+      } 
       let random = Math.floor(Math.random() * totalPersonnages) + 1;
       console.log("test");
       let url = `https://rickandmortyapi.com/api/character/${random}`;
