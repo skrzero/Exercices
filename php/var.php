@@ -1,0 +1,35 @@
+ <?php
+ include ("header.php");
+    $ville ="paris";
+    echo $ville."<br>";
+    $nom ="dupont";
+    $prenom ="jean";
+    echo ($prenom)." ".$nom."<br>";
+    $score =10;
+    echo $score."<br>";
+    $score =15;
+    echo $score."<br>";
+    $a =8;
+    $b =4;
+    $total = $a + $b;
+    echo "le total est"." ".$total."<br>";
+    $texte ="test";
+    $entier = 3;
+    $decimal = 3.14;
+    $boolean = true;
+    var_dump($texte)."<br>";
+    var_dump($entier);
+    var_dump($decimal);
+    var_dump($boolean);
+    echo $entier;
+ include ("footer.php");
+$note_maths = 15;
+   $note_francais = 12;
+   $note_histoire_geo = 9;
+   $moyenne = ($note_francais+$note_maths+$note_histoire_geo)/3;
+   echo 'La moyenne est de '.$moyenne.' / 20.';
+   $prix_ht = 50;
+   $tva = 20;
+   $prix_ttc = $prix_ht + ($prix_ht * $tva / 100);
+   echo 'Le prix TTC du produit est de '.$prix_ttc.' €.';
+    ?>

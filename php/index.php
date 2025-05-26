@@ -1,15 +1,24 @@
-<?php
-include ("settings.php");
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "<?php echo CSS_DIR;?>" /> 
-    <title>Document</title>
-</head>
-<body>
-    <h1 class="titre">test</h1>
-</body>
-</html>
+  <?php
+  include ("header.php");
+  ?>
+  <h1>Fichiers PHP dans le dossier courant</h1>
+  <ul>
+    <?php
+      // Liste tous les fichiers PHP du répertoire courant
+      $fichiers = glob("*.php");
+
+      if ($fichiers) {
+        foreach ($fichiers as $fichier) {
+          // Ne pas afficher index.php lui-même
+          if ($fichier !== basename(__FILE__)) {
+            echo '<li><a href="' . $fichier . '">' . $fichier . '</a></li>';
+          }
+        }
+      } else {
+        echo '<li>Aucun fichier PHP trouvé.</li>';
+      }
+    ?>
+  </ul>
+  <?php
+  include ("footer.php");
+  ?>
