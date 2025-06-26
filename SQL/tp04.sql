@@ -47,3 +47,28 @@ select count( distinct utilisateur_id ) from commande;
 select utilisateur_id ,count(*) as "nombre de commande" from commande
 group by utilisateur_id
 having count(*)>1;
+
+load data infile 'C:/ProgramData/MySQL/MySQL Server 8.4/Uploads/film.csv'
+into table film
+fields terminated by ','
+lines terminated by '\n'
+ignore 1 rows;
+
+load data infile 'C:/ProgramData/MySQL/MySQL Server 8.4/Uploads/realisateur.csv'
+into table realisateur
+fields terminated by ','
+lines terminated by '\n'
+ignore 1 rows;
+
+load data infile 'C:/ProgramData/MySQL/MySQL Server 8.4/Uploads/genre.csv'
+into table genre
+fields terminated by ','
+lines terminated by '\n'
+ignore 1 rows;
+
+
+load data infile 'C:/ProgramData/MySQL/MySQL Server 8.4/Uploads/projection.csv'
+into table projection
+fields terminated by ','
+lines terminated by '\n'
+ignore 1 rows;
