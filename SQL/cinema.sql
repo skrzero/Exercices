@@ -48,3 +48,46 @@ CREATE TABLE projection(
     id_film int,
     Foreign Key (id_film) REFERENCES film(id)
 );
+
+CREATE Table film(
+    id int auto_increment  PRIMARY KEY,
+    titre varchar(255) NOTNULL,
+    note decimal(3,1) check (note between 0 and 10),
+    statut varchar(255) DEFAULT 'actif',
+);
+
+alter table acteur
+    modify nom varchar(255) not null,
+    modify prenom varchar(255) not null,
+    modify dateNaissance date not null;
+
+alter table film
+    modify titre varchar(255) not null,
+    modify anneeSortie date not null,
+    modify dureeminutes int not null,
+    modify noteCritique decimal(3,1) check(noteCritique between 0 and 10),
+    modify paysOrigine varchar(255) not null unique;
+
+alter table films 
+    modify titre varchar(255) not null,
+    modify annee_sortie int not null,
+    modify genre varchar(100) not null,
+    modify duree_minutes int not null,
+    modify note decimal(3,1) check(note between 0 and 10);
+
+alter table genre
+    modify libelle varchar(255) not null;
+
+alter table projection
+    modify dateHeures datetime not null,
+    modify salle varchar(255) unique not null,
+    modify id_film int unique;
+
+alter table realisateur
+    modify nom varchar(255) not null,
+    modify prenom varchar(255) not null,
+    modify dateNaissance date not null;
+
+
+create index idx_nom on film (titre);
+create index idx_salle on projection (salle);
