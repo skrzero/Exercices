@@ -61,3 +61,10 @@ select count(disponible) as "location en cours" from velo
     WHERE disponible='non';
 
 select sum(montant_total) as 'chiffre d\'affaire' from location;
+
+SELECT DATE_FORMAT(dateheure_debut, '%Y-%m') AS mois, SUM(montant_total) AS revenu_total FROM location
+GROUP BY DATE_FORMAT(dateheure_debut, '%Y-%m')
+ORDER BY mois;
+
+create index idx_client on location (id_client);
+create index idx_date on location (dateheure_fin);
