@@ -37,6 +37,8 @@ CREATE TABLE location (
     dateheure_debut DATE,
     dateheure_fin DATE,
     montant_total INT
+    FOREIGN KEY (id_client) REFERENCES client(id)
+    FOREIGN KEY (id_velo) REFERENCES velo(id)
 );
 
 load data infile 'C:/ProgramData/MySQL/MySQL Server 8.4/Uploads/location.csv'
