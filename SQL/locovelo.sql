@@ -36,8 +36,8 @@ CREATE TABLE location (
     id_velo INT,
     dateheure_debut DATE,
     dateheure_fin DATE,
-    montant_total INT
-    FOREIGN KEY (id_client) REFERENCES client(id)
+    montant_total INT,
+    FOREIGN KEY (id_client) REFERENCES client(id),
     FOREIGN KEY (id_velo) REFERENCES velo(id)
 );
 

@@ -53,3 +53,42 @@ into table client
 fields terminated by ',' 
 lines terminated by '\n'
 ignore 1 rows; 
+
+-- jointure
+select * from table1
+inner join table 2 /*inner join est la jointure par default*/
+on table1.colonne_commune = table2.colonne_commune;
+
+select * from employes
+inner join departement 
+on employes.dep = departement.id;
+
+-- left join retourne toute les ligne du tableau de gauche meme si elle sont null
+select * from table1
+left join table2 
+on table1.colonne = table2.colonne;
+
+-- right join same shit
+select * from table1
+right join table2 
+on table1.colonne = table2.colonne;
+
+-- full join recupere toute les donnees quil y ai correspondance ou pas 
+select * from table1 
+full outer join table2
+on table1.colonne= table2.colonne;
+
+-- union= left join + right join
+select e.nom,e.profession,d.nom_dep from employes as e
+left join departement as d on e.dep = d.id_dep
+
+union
+
+select e.nom,e.profession,d.nom_dep from employes e /*on peut utiliser un espace a la place de AS pour renommer une element*/
+right join departement as d on e.dep =d.id.dep;
+
+-- cross join retourne toute les combinaison de ligne entre 2 tables 
+-- ex si table 1 contient 3 lignes et table 2 4 lignes cross join renverra 3x4 =12 lignes
+
+select * from table1
+cross join table2;
