@@ -48,8 +48,8 @@ select age, count(*) as "nombre d'employes" from employes group by age;
 select age , avg(salaire) as salaire_moyen from employes group by age 
 having avg(salaire)>6000; /* having equivalent a where une condition*/
 
-load data infile 'path/clients.csv'
+load data infile 'C:/ProgramData/MySQL/MySQL Server 8.4/Uploads/clients.csv'
 into table client
-fields terminated by ',' enclosed by ''
+fields terminated by ',' 
 lines terminated by '\n'
-ignore row
+ignore 1 rows; 

@@ -1,0 +1,6 @@
+id,marque,type,taille_pouces,tarif horaire,etat,disponible
+1,scott,vtt,12,55,tres bon,oui
+2,bmc,route,24,37,bon,non
+3,trek,vtt,12,41,bon,non
+4,orbea,electrique,16,47,bon,non
+5,trek,route,12,64,usee,oui
