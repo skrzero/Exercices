@@ -1,9 +1,3 @@
-CREATE Table film(
-    id int auto_increment  PRIMARY KEY,
-    titre varchar(255) NOTNULL,
-    note decimal(3,1) check (note between 0 and 10),
-    statut varchar(255) DEFAULT 'actif',
-);
 -- constraint
 
     NOT NULL - Ensures that a column cannot have a NULL value
@@ -13,6 +7,34 @@ CREATE Table film(
     CHECK - Ensures that the values in a column satisfies a specific condition
     DEFAULT - Sets a default value for a column if no value is specified
     CREATE INDEX - Used to create and retrieve data from the database very quickly
+-- type de données
+Les types de données
+
+Les principaux types de données en SQL sont :
+
+CHARACTER (ou CHAR) : valeur alpha de longueur fixe.
+
+CHARACTER VARYING (ou VARCHAR) : valeur alpha de longueur maximale fixée.
+
+TEXT : suite longue de caractères (sans limite de taille).
+
+NUMERIC (ou DECIMAL ou DEC) : décimal
+
+INTEGER (ou INT) : entier long
+
+REAL : réel à virgule flottante dont la représentation est binaire.
+
+BOOLEAN (ou LOGICAL) : vrai/faux
+
+DATE : date du calendrier grégorien.
+
+
+CREATE Table film(
+    id int auto_increment  PRIMARY KEY,
+    titre varchar(255) NOTNULL,
+    note decimal(3,1) check (note between 0 and 10),
+    statut varchar(255) DEFAULT 'actif',
+);
 
 create Table client(
     id INT PRIMARY KEY,
