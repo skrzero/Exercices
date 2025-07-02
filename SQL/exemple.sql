@@ -45,20 +45,17 @@ select age, count(*) as "nombre d'employes" from employes group by age;
 -- selectionne la colonne age compte la totalité et creer une nouvelle colonne
 -- as change le nom de sortie from employes group by regroupe la valeur
 
-select age , avg(salaire) as salaire_moyen from employes group by age 
+select age , avg(salaire) as salaire_moyen from employes 
+group by age 
 having avg(salaire)>6000; /* having equivalent a where une condition*/
 
-load data infile 'C:/ProgramData/MySQL/MySQL Server 8.4/Uploads/clients.csv'
-into table client
+load data infile 'C:/ProgramData/MySQL/MySQL Server 8.4/Uploads/film.csv'
+into table film
 fields terminated by ',' 
 lines terminated by '\n'
 ignore 1 rows; 
 
 -- jointure
-select * from table1
-inner join table 2 /*inner join est la jointure par default*/
-on table1.colonne_commune = table2.colonne_commune;
-
 select * from employes
 inner join departement 
 on employes.dep = departement.id;
@@ -92,3 +89,74 @@ right join departement as d on e.dep =d.id.dep;
 
 select * from table1
 cross join table2;
+-- 
+
+-- sous requete select 01/07
+select nom,
+(select avg(salaire)from employes as e)
+from employes
+
+-- sous requete from
+select dept,moyenne from(
+    select dep as dept, avg(salaire) as moyenne from employes
+    group by dep
+) as dep_stats;
+
+-- sous requete where
+select nom from employes
+where salaire >(
+    select avg(salaire)from employes);
+
+-- creation user mysql
+create user 'jean'@'localhost' identified by 'motdepasse'
+
+-- suppression user
+drop user 'jean'@'localhost'
+
+-- privileges grant
+grant select, insert on entreprise.* to 'jean'@'localhost';
+
+-- supprimer des privilege
+revoke insert on entreprise.* from 'jean'@'localhost';
+
+-- voir les droit
+show grants for 'jean'@'localhost';
+
+-- revoquer tout les privileges
+revoke all privileges , grant option from 'jean'@'localhost';
+
+-- creation de role
+create role 'lecteur';
+
+-- attribuer des droit a un role
+grant select on entreprise.* to 'lecteur';
+
+-- assigner un role a un user
+grant 'lecteur' to 'jean'@'localhost';
+
+-- role par default
+set default role 'lecteur' to 'jean'@'localhost';
+--  insert
+INSERT INTO location (id,id_client,id_velo,dateheure_debut,dateheure_fin,montant_total)
+    VALUES
+    (6,1,2,'2025-02-15','2025-02-16',70);
+
+INSERT INTO utilisateur (nom, prenom, age, email) VALUES
+('Durand', 'Lucie', 25, 'lucie.durand@mail.com'),
+('Martin', 'Hugo', NULL, 'hugo.martin@mail.com'),
+('Bernard', 'Claire', 34, NULL),
+('Petit', 'LÃ©a', 29, 'lea.petit@mail.com'),
+('Lemoine', 'Nina', NULL, NULL);
+
+
+
+
+
+
+
+
+
+
+
+
+
