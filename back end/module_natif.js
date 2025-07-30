@@ -1,6 +1,22 @@
-const fs = require('fs')
+const fs = require('fs');
 const readline = require('readline');
 const path = require('path');
+const http = require('http');
+
+const readJson = (path) => {
+  const raw = fs.readFileSync(path, 'utf-8');
+  return JSON.parse(raw);
+};
+
+const writeJson = (path, data) => {
+  fs.writeFileSync(path, JSON.stringify(data, null, 2));
+};
+
+
+
+
+
+
 
 let pathchemin = path.join(__dirname,'journal.txt'); /* creer une variable contenant le chemin de jounal.txt*/
 console.log(chemin);
